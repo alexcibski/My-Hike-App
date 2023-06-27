@@ -11,6 +11,10 @@ const connectLiveReload = require("connect-livereload");
 --------------------------------------------------------------- */
 const db = require('./models');
 
+/* Require the routes in the controllers folder
+--------------------------------------------------------------- */
+const hikesCtrl = require('./controllers/hikes')
+
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -45,6 +49,25 @@ app.use(connectLiveReload());
 app.get('/', function (req, res) {
     res.send('My Hikes')
 });
+//when GET request is sent to '/seed', the hikes collection is seeded
+app.get('/seed',function (req, res) {
+    db.Hike.deleteMany({})
+        .then(removedHikes => {
+            console.log(`Removed ${removedHikes.deletedCount} hikes`)
+            // Seed the hikes collection with the seed data
+            db.Hike.insertMany(db.seedHikes)
+                .then(addedHikes => {
+                    console.log(`Added ${addedHikes.length} hikes`)
+                    res.json(addedHikes)
+                })
+        })
+});
+
+// This tells our app to look at the `controllers/pets.js` file 
+// to handle all routes that begin with `localhost:3000/pets`
+app.use('/hikes', hikesCtrl)
+
+
 
 
 /* Tell the app to listen on the specified port
