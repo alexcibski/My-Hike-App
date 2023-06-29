@@ -28,6 +28,10 @@ router.get('/', function (req, res) {
         })
 })
 
+//new form route
+router.get('/new', (req, res) => {
+    res.render('new-hike')
+})
 
 // Show Route (GET/Read): Will display an individual hike document
 // using the URL parameter (which is the document _id)
@@ -41,25 +45,21 @@ router.get('/:id', function (req, res) {
     .catch(() => res.send('404 Error: Page Not Found'))
 })
 
-// New Route (GET/Read): This route renders a form 
-// which the user will fill out to POST (create) a new location
-router.get('/new', (req, res) => {
-    res.render('hikes/new-hike')
-})
+
 
 // Create Route (POST/Create): This route receives the POST request sent from the new route,
 // creates a new pet document using the form data, 
 // and redirects the user to the new pet's show page
 router.post('/', (req, res) => {
     db.Hike.create(req.body)
-    .then(hike => res.redirect('/' + hike._id))
+    .then(hike => res.json(hike))
 })
 
 // Edit Route (GET/Read): This route renders a form
 // the user will use to PUT (edit) properties of an existing hike
 router.get('/:id/edit', (req, res) => {
     db.Hike.findById(req.params.id)
-    .then(hike => res.render('hikes/edit-hike', { hike: hike }))
+    .then(hike => res.render('edit-hike', { hike: hike }))
 })
 
 // Update Route (PUT/Update): This route receives the PUT request sent from the edit route, 
@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
         req.body,
         { new: true }
     )
-        .then(hike => res.redirect('/hikes/' + hike._id))
+    .then(hike => res.json(hike))
 })
 
 // Destroy Route (DELETE/Delete): This route deletes a hike document 

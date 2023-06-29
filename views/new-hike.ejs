@@ -2,18 +2,18 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs', {title: `Edit ${hike.name} | My Hikes`}) %>
-    <link rel="stylesheet" href="/styles/hike-form.css">
+    <%- include('./partials/head.ejs', {title: 'Add a Hike'}) %>
+    <link rel="stylesheet" href="/styles/new-hike.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
     <section class="newproduct">
-        <h2>Edit A Hike</h2>
+        <h2>Add A Hike</h2>
     </section>
 
-    <form method="POST" action="/hikes/<%= hike._id %>?_method=PUT"></form>
+    <form method="POST" action="/hikes">
         <!-- Name input -->
         <label for="name"> Hike Name:</label>
         <input type="text" id="name" name="name" required>
@@ -33,11 +33,11 @@
         <br>
         <!-- city input -->
         <label for="city">City:</label>
-        <textarea id="city" name="city" required></textarea>
+        <input type="text" id="city" name="city" required>
         <br>
         <!-- state input -->
         <label for="state">State:</label>
-        <textarea id="state" name="state" required></textarea>
+        <input type="text" id="state" name="state" required>
         <br>
         <!-- route Photo input -->
         <label for="routePic">Route img (URL):</label>
@@ -51,7 +51,7 @@
         <label for="additionalInfo">Additional Info:</label>
         <textarea id="additionalInfo" name="additionalInfo" required></textarea>
         <br>
-        <input type="submit" value="Edit Hike">
+        <input type="submit" value="Add Hike">
     </form>
 
     

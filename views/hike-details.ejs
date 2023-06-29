@@ -23,9 +23,9 @@
             <p><strong>Additional Info:</strong> <%= hike.additionalInfo %></p>
         </section>
         <section class="actions">
-            <button class="btn"><a href="/<%= hike._id %>/edit">Edit</a></button>
+            <button class="btn"><a href="/hikes/<%= hike._id %>/edit">Edit</a></button>
 
-            <form method="POST" action="/<%= hike._id %>?_method=DELETE">
+            <form method="POST" action="/hikes/<%= hike._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
             
