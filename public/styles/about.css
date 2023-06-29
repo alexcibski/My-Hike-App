@@ -1,0 +1,30 @@
+
+header {
+    background-color: #D4A373;
+}
+
+img {
+    height: 360px;
+    width: 300px;
+    margin-left: auto;
+    border-radius: 20%;
+    
+}
+
+body {
+    background-color: #9A9B73;
+}
+/* About section styles */
+.about {
+    background-color: #CCC;
+    padding: 2rem;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about p {
+    margin-bottom: 1rem;
+}

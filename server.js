@@ -5,6 +5,8 @@ const path = require('path');
 const express = require('express');
 const livereload = require("livereload");
 const connectLiveReload = require("connect-livereload");
+const methodOverride = require('method-override');
+
 
 
 /* Require the db connection, models, and seed data
@@ -42,12 +44,19 @@ app.set('views', path.join(__dirname, 'views'));
 --------------------------------------------------------------- */
 app.use(express.static('public'))
 app.use(connectLiveReload());
+// Body parser: used for POST/PUT/PATCH routes: 
+// this will take incoming strings from the body that are URL encoded and parse them 
+// into an object that can be accessed in the request parameter as a property called body (req.body).
+app.use(express.urlencoded({ extended: true }));
+// Allows us to interpret POST requests from the browser as another request type: DELETE, PUT, etc.
+app.use(methodOverride('_method'));
+
 
 
 /* Mount routes
 --------------------------------------------------------------- */
 app.get('/', function (req, res) {
-    res.send('My Hikes')
+    res.render('home')
 });
 //when GET request is sent to '/seed', the hikes collection is seeded
 app.get('/seed',function (req, res) {
@@ -63,8 +72,12 @@ app.get('/seed',function (req, res) {
         })
 });
 
-// This tells our app to look at the `controllers/pets.js` file 
-// to handle all routes that begin with `localhost:3000/pets`
+app.get('/about', function (req, res) {
+    res.render('about')
+})
+
+// This tells our app to look at the `controllers/hikes.js` file 
+// to handle all routes that begin with `localhost:3000/hikes`
 app.use('/hikes', hikesCtrl)
 
 

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: `${hike.name} | My Hikes`}) %>
+    <link rel="stylesheet" href="/styles/hike-details.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div>
+        <img src="/<%= hike.routePic %>">
+        <h2 class="hike-name"><%= hike.name %></h2>
+        <section>
+            <p><strong>Miles:</strong> <%= hike.miles %></p>
+            <p><strong>Elevation Gain:</strong> <%= hike.elevationGain %> feet</p>
+            <p><strong>Description:</strong> <%= hike.description %></p>
+            
+            <p><strong>City:</strong> <%= hike.city %></p>
+            <p><strong>State:</strong> <%= hike.state %></p>
+            <img src="/<%= hike.inclinePic %>">
+            <p><strong>Additional Info:</strong> <%= hike.additionalInfo %></p>
+        </section>
+        <section class="actions">
+            <button class="btn"><a href="/<%= hike._id %>/edit">Edit</a></button>
+
+            <form method="POST" action="/<%= hike._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+            
+            
+        <!-------- Gear BUTTON IN PROGRESS ----------->
+            <button class="btn"><a href="/reviews/new/<%= hike._id %>">Add A Gearlist</a></button>
+            
+        </section>
+        
+    </div>
+
+   
+</body>
+
+</html>

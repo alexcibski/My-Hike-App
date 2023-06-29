@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Hikes'}) %>
+    <link rel="stylesheet" href="/styles/hike-index.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+<h2>Thanks for visiting our store! Feel free to start shopping Below!</h2>
+    <main>
+        <section class="hikelist">
+            <h1>My Hikes</h1>
+            <ul>
+                <% for (let hike of hikes) { %>
+                <li>
+                    <figure>
+                        <img src="<%= hike.photo %>">
+                        <figcaption>
+                            <h4><%= hike.name %></h4>
+                            <%= hike.miles %> miles
+                            <p><%= hike.elevationGain %> feet of climb 
+                                
+                            <a href="/hikes/<%= hike._id %>">Learn More</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+      <div id="addhike"><a href="/hikes/new">Add A Hike</a></div>
+    </main>
+
+    
+</body>
+
+</html>
