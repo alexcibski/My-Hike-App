@@ -16,7 +16,7 @@ const db = require('./models');
 /* Require the routes in the controllers folder
 --------------------------------------------------------------- */
 const hikesCtrl = require('./controllers/hikes')
-
+const gearsCtrl = require('./controllers/gears')
 
 /* Create the Express app
 --------------------------------------------------------------- */
@@ -79,6 +79,9 @@ app.get('/about', function (req, res) {
 // This tells our app to look at the `controllers/hikes.js` file 
 // to handle all routes that begin with `localhost:3000/hikes`
 app.use('/hikes', hikesCtrl)
+// This tells our app to look at the `controllers/gears.js` file 
+// to handle all routes that begin with `localhost:3000/gears`
+app.use('/gears', gearsCtrl)
 
 
 

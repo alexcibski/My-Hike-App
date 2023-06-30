@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head.ejs', {title: 'Edit Gear List'}) %>
+    <link rel="stylesheet" href="/styles/edit-gear.css">
+</head>
+
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+<section class="newproduct">
+    <h2>Edit Gear List</h2>
+</section>
+
+<form method="POST" action="/gears/<%= gear._id %>?_method=PUT"></form>
+    <!-- parking pass input -->
+    <label for="parkingPass"> Parking Pass:</label>
+    <input type="text" id="parkingPass" name="parkingPass" required>
+    <br>
+    <!-- ten essentials input -->
+    <label for="tenEssentials">Ten Essentials:</label>
+    <input type="text" id="tenEssentials" name="tenEssentials" default="true"  required>
+    <br>
+    <!-- bear cannister input -->
+    <label for="bearCannister">Elevation Gain:</label>
+    <input type="text" id="bearCannister" name="elevationGain"  required>
+    
+    <br>
+    <!-- bear spray input -->
+    <label for="notes">Additionsl Notes:</label>
+    <input type="text" id="bearSpray" name="bearSpray"  required>
+    <br>
+    <!-- notes input -->
+    <label for="notes">Additionsl Notes:</label>
+    <input type="text" id="notes" name="notes"  required>
+    <input type="submit" value="Add Gear List">
+</form>
+</body>
+
+</html>

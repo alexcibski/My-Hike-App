@@ -1,6 +1,6 @@
 //Require the Mongoose package
 const mongoose = require('mongoose');
-// const gearSchema = require('./gear');
+const gearSchema = require('./gear.js');
 
 //create a schema to define the properties of the hikes collection
 const hikeSchema = new mongoose.Schema({
@@ -14,7 +14,7 @@ const hikeSchema = new mongoose.Schema({
     inclinePic: { type: String, required: false},
     additionalInfo: {type: String, required: false},
 //gear schema below
-    // gear: [gearSchema]
+    gears: [gearSchema]
 
 });
 

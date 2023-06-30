@@ -52,7 +52,7 @@ router.get('/:id', function (req, res) {
 // and redirects the user to the new pet's show page
 router.post('/', (req, res) => {
     db.Hike.create(req.body)
-    .then(hike => res.json(hike))
+    .then(hike => res.redirect('/hikes/' + hike._id))
 })
 
 // Edit Route (GET/Read): This route renders a form
@@ -71,7 +71,7 @@ router.put('/:id', (req, res) => {
         req.body,
         { new: true }
     )
-    .then(hike => res.json(hike))
+    .then(hike => res.redirect('/hikes/' + hike._id))
 })
 
 // Destroy Route (DELETE/Delete): This route deletes a hike document 

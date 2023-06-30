@@ -28,14 +28,37 @@
             <form method="POST" action="/hikes/<%= hike._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
+
             
             
         <!-------- Gear BUTTON IN PROGRESS ----------->
-            <button class="btn"><a href="/reviews/new/<%= hike._id %>">Add A Gearlist</a></button>
+            <button class="btn"><a href="/gears/new/<%= hike._id %>">Add A Gearlist</a></button>
             
         </section>
         
     </div>
+    <% if (hike.gears.length > 0) { %>
+        <div class="gears" open>
+            <h1>Gear List</h1>
+            <hr>
+            <ul>
+                <% for (let gear of hike.gears) { %>
+                
+            <li>    <p>Parking Pass: <%= gear.parkingPass %></p></li>
+            <li>    <p>Ten Essentials: <%= gear.tenEssentials %></p></li>
+            <li>    <p>Bear Cannister: <%= gear.bearCannister %></p></li>
+            <li>    <p>Bear Spray: <%= gear.bearSpray %></p></li>
+            <li>    <p>Additional Notes: <%= gear.notes %></p></li>
+            <form method="POST" action="/gears/<%= gear._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>       
+                
+                <% } %>
+            </ul>
+            
+        </div>
+        <% } %>
+        
 
    
 </body>

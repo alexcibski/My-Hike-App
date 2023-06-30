@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 
 const gearSchema = new mongoose.Schema({
-    parkingPass: { type: Boolean, default: false, required: true},
-    tenEssentials: { type: Boolean, default: true, required: true},
-    bearCannister: { type: Boolean, default: false, required: true},
-    bearSpray: { type: Boolean, default: false, required: true}
+    parkingPass: { type: String, required: true},
+    tenEssentials: { type: String, required: true},
+    bearCannister: { type: String, required: true},
+    bearSpray: { type: String, required: true},
+    notes: { type: String, required: false}
 });
 
 module.exports = gearSchema;
