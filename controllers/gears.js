@@ -70,8 +70,8 @@ router.delete('/:id', (req, res) => {
         { $pull: { gears: { _id: req.params.id } } },
         { new: true }
     )
-        .then(hike => res.json(hike))
-});
+        .then(hike => res.redirect('/hikes/' + hike._id))
+    })
 
 
 /* Export these routes so that they are accessible in `server.js`
