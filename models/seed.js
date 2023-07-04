@@ -6,8 +6,8 @@ const hikes = [
         description: 'Out and back trail to the top of Mount Si',
         city: 'North Bend',
         state: 'WA',
-        routePic: '',
-        inclinePic: '',
+        routePic: 'assets/mtsi.jpeg',
+        inclinePic: 'assets/mtsimap.jpeg',
         additionalInfo: 'Trailhead parking lot is open from dawn until dusk. Parking lot is busiest on weekends so plan accordingly.'
     },
     {
@@ -17,8 +17,8 @@ const hikes = [
         description: 'Lakeside trail that follows the east bank of Baker Lake with waterfront campsites every few miles.',
         city: 'Concrete',
         state: 'WA',
-        routePic: '',
-        inclinePic: '',
+        routePic: 'assets/bakerlake.jpeg',
+        inclinePic: 'assets/bakerlakemap.jpeg',
         additionalInfo: 'Limited parking at trailhead. Do not forget to self register at station before entering forest.'
     },
     {
@@ -28,8 +28,8 @@ const hikes = [
         description: 'Lolipop shaped out and back with beautiful coastal views.',
         city: 'Arch Cape',
         state: 'OR',
-        routePic: '',
-        inclinePic: '',
+        routePic: 'assets/capefalcon.jpeg',
+        inclinePic: 'assets/capefalconmap.jpeg',
         additionalInfo: 'parking along route 101 as well as a designated parking lot just south of trailhead.'
     },
     {
@@ -39,9 +39,9 @@ const hikes = [
         description: 'Old growth forest trail that brings hikers to ten different waterfalls.',
         city: 'Mehama',
         state: 'OR',
-        routePic: '',
-        inclinePic: '',
-        additionalInfo: 'Five dollar fee to park a vehicle in the Silver Falls State Park where hike is.'
+        routePic: 'assets/polesbridge.jpeg',
+        inclinePic: 'assets/tenfallsmap.jpeg',
+        additionalInfo: 'Five dollar fee to park a vehicle in the Silver Falls State Park at trailhead.'
     }
 ]
 

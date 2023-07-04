@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scrollbar-color: #333;
+    scrollbar-color: #283618;
     scrollbar-width: 10px;
 }
 
@@ -13,7 +13,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-    background-color: #333;
+    background-color: #283618;
     border-radius: 2px;
 }
 
@@ -66,21 +66,3 @@ nav li:not(:last-child) {
 nav a {
     font-size: 1.2rem;
 }
-
-
-
-/* Footer styles */
-/* footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #333;
-    width: calc(100vw - 1rem);
-}
-
-footer * {
-    color: #fff;
-}
-
-footer ul {
-    justify-content: center;
-} */

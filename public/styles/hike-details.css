@@ -10,10 +10,10 @@ div {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    border: 1px solid #ccc;
+    border: 2px solid #3a5a40;
     padding: 20px;
     margin: 4vh auto;
-    box-shadow: 2px 2px 5px #ccc;
+    box-shadow: 2px 2px 5px #344e41;
 }
 
 img {
