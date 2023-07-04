@@ -37,7 +37,14 @@ router.get('/', (req, res) => {
 
 // New Route: GET localhost:3000/gears/new
 router.get('/new/:hikeId', (req, res) => {
-    res.render('new-gear')
+    db.Hike.findById(req.params.hikeId)
+        .then(hike => {
+            if (hike) {
+                res.render('new-gear.ejs', { hike: hike })
+            } else {
+                res.render('404')
+            }
+        })
 })
 
 // Create Route: POST localhost:3000/gears/

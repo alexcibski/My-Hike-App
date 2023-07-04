@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <%- include('./partials/head.ejs', {title: 'Add a Hike'}) %>
+    <%- include('./partials/head.ejs', {title: 'Add Gear List'}) %>
     <link rel="stylesheet" href="/styles/new-hike.css">
 </head>
 
@@ -13,14 +13,14 @@
     <h2>Add A Gear List</h2>
 </section>
 
-<form method="POST" action="/gears">
+<form method="POST" action="/gears/create/<%=hike._id %>">
     <!-- parking pass input -->
     <label for="parkingPass"> Parking Pass:</label>
     <input type="text" id="parkingPass" name="parkingPass" required>
     <br>
     <!-- ten essentials input -->
     <label for="tenEssentials">Ten Essentials:</label>
-    <input type="text" id="tenEssentials" name="tenEssentials" default="true"  required>
+    <input type="text" id="tenEssentials" name="tenEssentials"  required>
     <br>
     <!-- bear cannister input -->
     <label for="bearCannister">Bear Cannister:</label>
