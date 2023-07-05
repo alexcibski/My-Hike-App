@@ -2,6 +2,7 @@
 
 1. Screenshot of app
 ![screenshot](assets/screenshot.jpeg)
+![Screenshot 2023-07-05 at 8 21 53 AM](https://github.com/alexcibski/My-Hike-App/assets/136136316/1366665e-81ac-43b9-b7d1-acc1626d63bb)
 
 2. Technologies used: javascript, html, css, ejs, node.js, express, mongoose, mongodb
 
