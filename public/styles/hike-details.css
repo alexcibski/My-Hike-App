@@ -18,15 +18,10 @@ div {
 
 img {
     width: 60%;
-    min-width: 300px;
+    /* min-width: 200px; */
     height: 30%;
     min-height: 150px;
     object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.product-name {
-    font-size: 32px;
     margin-bottom: 10px;
 }
 
@@ -44,11 +39,6 @@ strong {
     font-weight: bold;
 }
 
-.featured {
-    background-color: #ffd700;
-}
-
-/* Style Action Buttons */
 .actions {
     margin-top: 1rem;
     display: flex;

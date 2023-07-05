@@ -3,6 +3,7 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    text-align: justify;
 }
 
 header {
@@ -12,62 +13,21 @@ header {
 body {
     background-color: #9A9B73;
 }
-.productlist {
-    margin-top: 50px;
+
+h2 {
+    margin-left: 15px;
 }
 
-.productlist h1 {
-    margin-bottom: 20px;
-    text-align: center;
+ul { 
+    margin-left: 30px;
 }
 
-.productlist ul {
-    list-style: none;
-    padding: 0;
+.link {
+    color:#E6AF2E;
+    text-decoration: underline;
 }
 
-.productlist li {
-    margin-bottom: 40px;
-    border: 2px solid #ccc;
-    background-color: #ccc;
-    padding: 20px;
-    border-radius: 4px;
-    position: relative;
-    text-align: center;
-}
-
-.productlist li img {
-    max-width: 100%;
-    height: auto;
-}
-
-figcaption {
-    text-align: left;
-}
-
-.productlist li h4 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.productlist li p {
-    font-size: 16px;
-    margin-bottom: 10px;
-}
-
-.productlist li a {
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    text-decoration: none;
-}
-
-.productlist li a:hover {
-    background-color: #555;
+.addhike {
+    color: #C7EFCF;
+    text-decoration: wavy underline;
 }

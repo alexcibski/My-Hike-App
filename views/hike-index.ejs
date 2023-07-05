@@ -8,28 +8,31 @@
 
 <body>
     <%- include('./partials/nav.ejs') %>
+        <br>
 <h2>My Saved Hikes</h2>
     <main>
         <section class="hikelist">
-            <h1>My Hikes</h1>
+            
             <ul>
                 <% for (let hike of hikes) { %>
+                <br>
                 <li>
                     <figure>
-                        <img src="<%= hike.photo %>">
+                        
                         <figcaption>
                             <h4><%= hike.name %></h4>
                             <%= hike.miles %> miles
                             <p><%= hike.elevationGain %> feet of climb 
-                                
-                            <a href="/hikes/<%= hike._id %>">Learn More</a>
+                            <br>    
+                            <a class="link" href="/hikes/<%= hike._id %>">Learn More</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
             </ul>
         </section>
-      <div id="addhike"><a href="/hikes/new">Add A Hike</a></div>
+        <br>
+      <div id="addhike"><a class="addhike" href="/hikes/new">Add A Hike</a></div>
     </main>
 
     

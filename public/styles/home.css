@@ -11,12 +11,16 @@ img {
     
 }
 
+.logo {
+    text-align: center;
+}
+
 body {
     background-color: #9A9B73;
 }
-/* About section styles */
+
 .about {
-    background-color: #CCC;
+    background-color: #D4A373;
     padding: 2rem;
 }
 .about p {
