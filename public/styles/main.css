@@ -54,3 +54,7 @@ nav li:not(:last-child) {
 nav a {
     font-size: 1.2rem;
 }
+
+.btn {
+    background-color:#C0600C
+}
