@@ -42,6 +42,17 @@ const hikes = [
         routePic: 'assets/polesbridge.jpeg',
         inclinePic: 'assets/tenfallsmap.jpeg',
         additionalInfo: 'Five dollar fee to park a vehicle in the Silver Falls State Park at trailhead.'
+    },
+    {
+        name: 'Blue Lake Trail',
+        miles: 4.4,
+        elevationGain: 1050,
+        description: 'Out and back hike to a beautiful alpine lake',
+        city: 'Concrete',
+        state: 'WA',
+        routePic: 'assets/bluelake.jpeg',
+        inclinePic: 'assets/lakepic.jpeg',
+        additionalInfo: 'Northwest Forest Pass for parking'
     }
 ]
 
